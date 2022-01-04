@@ -1,0 +1,226 @@
+ /* Root Predifined Styles */
+
+ @import url(https://fonts.google.com/specimen/Spartan);
+
+ :root {
+   --VeryDarkMagenta: hsl(300, 43%, 22%);
+   --SoftPink: hsl(333, 80%, 67%);
+   --DarkGrayishMagenta: hsl(303, 10%, 53%);
+   --LightGrayishMagenta: hsl(300, 24%, 96%);
+   --White: hsl(0, 0%, 100%);
+   font-family: 'spartan', sans-serif;
+ }
+
+ /* Global Reset */
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ p,
+ span {
+   font-size: 15px;
+ }
+
+ body {
+   background-image: url(images/bg-pattern-top-mobile.svg),
+   url(images/bg-pattern-bottom-mobile.svg);
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: right 0vw top 0vh, left 10vw top 60vh;
+   padding: 2rem;
+   height: 100vh;
+   top: 0;
+ }
+
+ h1 {
+   font-weight: 700;
+   color: var(--VeryDarkMagenta);
+   text-align: center;
+   padding-bottom: 1.5rem;
+ }
+
+ header p {
+   text-align: center; 
+   color: var(--DarkGrayishMagenta);
+   padding-bottom: 3rem;
+   font-size: 18px;
+   font-weight: 500;
+ }
+
+ .rating {
+   text-align: center;
+ }
+
+ .rating-block {
+   background-color: var(--LightGrayishMagenta);
+   color: var(--VeryDarkMagenta);
+   margin-bottom: 2rem;
+   font-weight: 700;
+   padding: 1rem 0;
+   border-radius: 1rem;
+ }
+
+ .stars {
+   display: flex;
+   padding-bottom: 1rem;
+   gap: 1rem;
+   justify-content: center;
+ }
+
+ .rating-block img {
+   display: flex;
+ }
+
+ /* Comment section */
+
+ .comments p {
+   color: var(--White);
+ }
+
+ .name {
+   font-weight: 500;
+ }
+
+ span {
+   color: var(--SoftPink);
+ }
+
+ .comment-block {
+   background-color: var(--VeryDarkMagenta);
+   padding: 1.5rem;
+   border-radius: 1rem;
+   margin: 2rem 0;
+ }
+
+ .comment-head  {
+   display: flex;
+   line-height: 2rem;
+   padding-bottom: 1rem;
+ }
+
+ .comment-head p {
+   padding-left: 2rem;
+ }
+
+
+ .comment-head img {
+   border-radius: 50%;
+   width: 4rem;
+   height: 4rem;
+ }
+
+ .quote {
+   line-height: 2rem;
+ }
+
+ /* Desktop View */
+
+ @media (min-width: 600px) {
+   header h1,
+   header p {
+     text-align: left;
+     max-width: 40%;
+     display: flex;
+     line-height: 2rem;
+   }
+
+   body {
+     position: relative;
+     top: 0;
+     
+     background: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+     background-position:  right 60vw top 0vh, left 20vw bottom 0;
+     background-repeat: no-repeat;
+     height: 100vh;
+     width: 100%;
+   }
+   
+   header h1 {
+     font-size: 2.5rem;
+     line-height: 3rem;
+   }
+
+
+   .rating {
+     top: 2rem;
+     right: 2rem;
+     position: absolute;
+     width: 32%;
+   }
+
+   .rating-block {
+     position: relative;
+     display: flex;
+   }
+
+   .rating-block p {
+     padding-left: 11rem;
+   }
+
+   .rating-block img {
+     display: block;
+   }
+
+   .stars {
+     position: absolute;
+     margin-left: 1rem;
+   }
+
+   #rating-one {
+       margin-left: -6rem;
+       margin-right: 6rem;
+   }
+
+   #rating-two {
+    margin-left: -3rem;
+    margin-right: 3rem;
+    }
+
+   .comments {
+     display: flex;
+     gap: 2rem;
+     justify-content: center;
+   }
+
+   .comment-block {
+     position: relative;
+     float: left;
+     margin-top: 0.5rem;
+     max-width: 24rem;
+   }
+
+   #comment-one {
+        margin-top: -1rem;
+        margin-bottom: 7rem;
+   }
+   #comment-two {
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+    }
+    #comment-three {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+ }
+
+ @media (max-width: 877px) {
+  
+      .stars {
+        display: flex;
+        padding-left: 3rem;
+        padding-bottom: 1rem;
+        justify-content: center;
+      }
+     
+      .rating-block img {
+        display: flex;
+        justify-content: center;
+      }
+      .rating-block p {
+        padding-left: 1rem;
+        padding-top: 2rem;
+      }
+ }
